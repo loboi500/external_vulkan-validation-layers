@@ -1,16 +1,32 @@
 # See https://git-scm.com/docs/gitattributes
 # See https://help.github.com/articles/dealing-with-line-endings/
-
 # Default behavior, if core.autocrlf is unset.
 * text=auto
-
 # Files to be converted to native line endings on checkout.
 *.cpp text
 *.h text
-
 # Text files to always have CRLF (dos) line endings on checkout.
 *.bat text eol=crlf
-
 # Text files to always have LF (unix) line endings on checkout.
 *.sh text eol=lf
-
+BUILD.gn filter=lfs diff=lfs merge=lfs -text
+external filter=lfs diff=lfs merge=lfs -text
+LICENSE.txt filter=lfs diff=lfs merge=lfs -text
+Android.mk filter=lfs diff=lfs merge=lfs -text
+build-android filter=lfs diff=lfs merge=lfs -text
+build-gn filter=lfs diff=lfs merge=lfs -text
+GOVERNANCE.md filter=lfs diff=lfs merge=lfs -text
+METADATA filter=lfs diff=lfs merge=lfs -text
+BUILD.md filter=lfs diff=lfs merge=lfs -text
+cmake filter=lfs diff=lfs merge=lfs -text
+CMakeLists.txt filter=lfs diff=lfs merge=lfs -text
+CONTRIBUTING.md filter=lfs diff=lfs merge=lfs -text
+MODULE_LICENSE_APACHE2 filter=lfs diff=lfs merge=lfs -text
+OWNERS filter=lfs diff=lfs merge=lfs -text
+tests filter=lfs diff=lfs merge=lfs -text
+CODE_OF_CONDUCT.md filter=lfs diff=lfs merge=lfs -text
+docs filter=lfs diff=lfs merge=lfs -text
+layers filter=lfs diff=lfs merge=lfs -text
+NOTICE filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+scripts filter=lfs diff=lfs merge=lfs -text
